@@ -1,0 +1,4 @@
+cd OneDrive
+cd Документы
+cd GitHub
+cd yce_systems
