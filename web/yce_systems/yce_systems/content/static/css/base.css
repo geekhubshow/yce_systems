@@ -1,0 +1,112 @@
+@font-face {
+   font-family: 'ubuntu';
+   src: url('font.ttf') format('truetype');
+   font-style: normal;
+   font-weight: 100;
+ }
+/*animation*/
+@keyframes pulse {
+  from {transform: scale(.85);}
+  50% {transform: scale(1);}
+  to {transform: scale(.85);}
+}
+
+
+@keyframes preloader-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+   @keyframes preloader-bounce {
+
+  0%, 100% {transform: scale(0);}
+  50% {transform: scale(1);}
+}
+   .loaded_hiding section {transition: 5s opacity; opacity: 0; display: none; z-index: -1000;
+}
+
+* {display: grid; font-family: 'ubuntu', sans-serif; cursor: pointer;}
+
+body {margin: 0;}
+input, textarea, select, option, button, button:active, button:focus, header, main, body, div.results {outline: none; color: #CCCCCC; background-color: #323232;}
+section {position: fixed; justify-content: center; align-content: center; background-color: #323232; z-index: 1000; width: 100%; top: 0; bottom: 0;}
+script, title {display: none;}
+header {width: 100%; position: fixed;  top: 0; align-content: center; justify-content: center; opacity: 0.85;}
+div.header {position: fixed;  top: 0; align-content: center; justify-content: space-evenly; opacity: 0.85; grid-auto-flow: column; justify-self: center;}
+
+
+
+div.title { justify-self: center; align-self: start;  justify-content: center; align-content: center;}
+div.environment {opacity: 0; visibility: hidden; position: fixed; z-index: -1; transition: all 0.5s; justify-content: center; width: 100%;}
+ div.environment:target {opacity: 0.9; z-index: 1; visibility: visible;  }
+div.project, form.edit_project, form.upload, form.bug_report, div.share, form.lang, div.comment, form.edit_comment, div.upload_comment, div.home, form.edit_account, div.account, form.auth, form.reg, div.account-info, div.comment_info, div.project, form.edit_project, form.upload, div.project_info, form.search  {background-color: #323232; overflow: auto;}
+div.img_command {justify-content: center; align-content: center; }
+button.name_command, div.name_command { align-content: center; justify-content: start;}
+div.command {justify-content: center; align-content: center; grid-auto-flow: column;}
+
+h1, h2, h3, h4, h5, h6 {color: #CCCCCC;  margin: 0; }
+h1.title {color: #0096FF;}
+a {text-decoration: none; justify-content: start; align-content: center; }
+textarea {resize: none;}
+option {border: none;}
+button, button:active, button:focus {  -webkit-appearance: none;-moz-appearance: none;appearance: none;border: 0;border-radius: 0;}
+div.one_button {grid-auto-flow: row; justify-content: center; align-content: space-around;}
+
+@media screen and (min-device-height: 300px)
+{
+}
+
+
+@media screen and (min-device-height: 600px)
+ {
+}
+
+@media screen and (min-device-height: 900px)
+{
+img.preload {width: 120px; }
+header {height: 60px; box-shadow: 0 0 20px rgba(0,0,0,0.5);}
+div.header {height: 60px; width: 360;}
+img.panel {height: 40px; }
+img.mini-panel {height: 30px; }
+ div.environment {margin-top: 80px; height: 800px; width: 100%;}
+ div.title {height: 45px; width: 240px; }
+  div.img_command {height: 35px; }
+div.command { width: 200px; height: 50px; margin-left: 20px; outline: 2px solid #323232; border-radius: 10px;}
+  div.command:hover {outline: 2px solid #0096FF;  box-shadow: 0px 0px 500px rgba(0.5,0.5,0.5); border-radius: 10px; -moz-border-radius: 10px; -webkit-border-radius: 10px;}
+  button.name_command, div.name_command { height: 35px; width: 120px; margin-left: 10px;}
+  img.command {height: 25px; }
+
+ div.home {box-shadow: 0px 0px 500px rgba(0.5,0.5,0.5,10); border-radius: 10px; height: 450px; width: 240px; }
+
+   div.share {box-shadow: 0px 0px 500px rgba(0.5,0.5,0.5,10); border-radius: 10px; height: 230px; width: 240px; }
+div.comment {box-shadow: 0px 0px 500px rgba(0.5,0.5,0.5,10); border-radius: 10px; height: 170px; width: 250px; }
+form.edit_comment {box-shadow: 0px 0px 500px rgba(0.5,0.5,0.5,10); border-radius: 10px; height: 750px; width: 590px; }
+input.rating {width: 30px;}
+div.upload_comment {box-shadow: 0px 0px 500px rgba(0.5,0.5,0.5,10); border-radius: 10px; height: 250px; width: 190px; }
+form.bug_report {box-shadow: 0px 0px 500px rgba(0.5,0.5,0.5,10); border-radius: 10px; height: 240px; width: 340px; }
+form.search {width: 350px; height: 350px; box-shadow: 0px 0px 500px rgba(0.5,0.5,0.5,10);  border-radius: 10px;}
+div.search {margin-top: 60px; height: 800px; }
+form.lang {box-shadow: 0px 0px 500px rgba(0.5,0.5,0.5,10);  border-radius: 10px; height: 650px; width: 240px; }
+form.auth {width: 350px; height: 300px; box-shadow: 0px 0px 500px rgba(0.5,0.5,0.5,10);  border-radius: 10px;}
+div.auth {margin-top: 60px; height: 750px; }
+
+form.reg {width: 350px; height: 300px; box-shadow: 0px 0px 500px rgba(0.5,0.5,0.5,10); border-radius: 10px; }
+div.reg{margin-top: 60px; height: 750px;}
+
+div.project_panel { height: 430px; }
+form.edit_project_panel {box-shadow: 0px 0px 500px rgba(0.5,0.5,0.5,10); border-radius: 10px; height: 400px; width: 590px; }
+form.upload_panel {box-shadow: 0px 0px 500px rgba(0.5,0.5,0.5,10);  border-radius: 10px; height: 250px; width: 340px; }
+   div.upload {height: 150px;}
+div.choice {width: 350px; height: 35px;}
+
+  input {width: 300px; border: 2px solid #323232; margin-left: 20px;}
+   input:hover {box-shadow: 0 0 20px rgba(0,0,0,0.5); border-radius: 10px; border: 2px solid #0096FF;}
+  textarea.desc {width: 300px; height: 55px; margin-left: 20px; border: 2px solid #323232; border-radius: 10px;}
+   textarea.desc:hover {box-shadow: 0 0 20px rgba(0,0,0,0.5); border-radius: 10px; border: 2px solid #0096FF;}
+   div.one_button {width: 340px; height: 50px;}
+  label {height: 23px; width: 300px; margin-left: 20px;}
+}
+@media screen and (min-device-height: 1700px)
+{
+}
